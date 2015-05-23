@@ -6,11 +6,13 @@ import socket
 import sys
 from thread import *
  
-HOST = '192.241.235.149'   # Symbolic name meaning all available interfaces
+HOST = socket.gethostname()   # Symbolic name meaning all available interfaces
 PORT = 8888 # Arbitrary non-privileged port
  
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 print 'Socket created'
+print HOST
+print PORT
  
 #Bind socket to local host and port
 try:
